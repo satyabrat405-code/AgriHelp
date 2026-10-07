@@ -1,0 +1,17 @@
+{
+  "name": "AgriHelp AI - Smart Crop Health",
+  "short_name": "AgriHelp AI",
+  "description": "Smart Crop Disease Detection & Local Remedy Finder for Farmers",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#062817",
+  "theme_color": "#062817",
+  "icons": [
+    {
+      "src": "/icon.svg",
+      "sizes": "192x192 512x512",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ]
+}

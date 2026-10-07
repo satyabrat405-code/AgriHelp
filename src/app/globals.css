@@ -1,0 +1,102 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Outfit:wght@400;500;600;700;800&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --verda-bg: #F7F5F0;
+  --verda-card: #FFFFFF;
+  --verda-border: #E5E0D8;
+  --verda-spruce: #13392E;
+  --verda-lime: #70B22C;
+  --verda-charcoal: #15211B;
+  --verda-muted: #4B5548;
+}
+
+body {
+  color: #15211B;
+  background-color: #F7F5F0;
+  background-image: 
+    radial-gradient(at 0% 0%, rgba(112, 178, 44, 0.07) 0px, transparent 50%),
+    radial-gradient(at 100% 100%, rgba(19, 57, 46, 0.06) 0px, transparent 50%),
+    radial-gradient(at 50% 50%, rgba(243, 239, 232, 0.5) 0px, transparent 100%);
+  background-attachment: fixed;
+  min-height: 100vh;
+  font-family: 'Plus Jakarta Sans', 'Outfit', 'Inter', system-ui, -apple-system, sans-serif;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* VerdaAgro Card Styles */
+.verda-card {
+  background: #FFFFFF;
+  border: 1px solid #E5E0D8;
+  box-shadow: 0 8px 30px rgba(19, 57, 46, 0.06);
+  border-radius: 20px;
+}
+
+.verda-card-warm {
+  background: #FCFAF7;
+  border: 1px solid #EAE5DC;
+  box-shadow: 0 8px 25px rgba(19, 57, 46, 0.04);
+  border-radius: 20px;
+}
+
+.verda-card-hover {
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.verda-card-hover:hover {
+  transform: translateY(-2px);
+  border-color: #70B22C;
+  box-shadow: 0 16px 36px rgba(19, 57, 46, 0.1);
+}
+
+/* Custom soundwave equalizer bars */
+.sound-bar {
+  display: inline-block;
+  width: 3.5px;
+  background: #70B22C;
+  border-radius: 9999px;
+  margin: 0 1.5px;
+  animation: soundwave 1s ease-in-out infinite alternate;
+}
+.sound-bar:nth-child(1) { animation-delay: 0.1s; height: 10px; }
+.sound-bar:nth-child(2) { animation-delay: 0.3s; height: 20px; }
+.sound-bar:nth-child(3) { animation-delay: 0.5s; height: 14px; }
+.sound-bar:nth-child(4) { animation-delay: 0.2s; height: 22px; }
+.sound-bar:nth-child(5) { animation-delay: 0.4s; height: 12px; }
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #F7F5F0;
+}
+::-webkit-scrollbar-thumb {
+  background: #D8D1C3;
+  border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #13392E;
+}
+
+/* Print Prescription Styles */
+@media print {
+  body {
+    background: #ffffff !important;
+    color: #000000 !important;
+  }
+  .no-print {
+    display: none !important;
+  }
+  .print-prescription {
+    display: block !important;
+    background: #ffffff !important;
+    color: #000000 !important;
+    border: 2px solid #000000 !important;
+    padding: 20px !important;
+  }
+}
